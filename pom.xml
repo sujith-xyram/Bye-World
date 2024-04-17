@@ -5,24 +5,36 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>ByeWorld</name>
   <dependencies>
-	  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>4.19.1</version>
-</dependency>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.19.1</version>
+    </dependency>
 
-	  <!-- https://mvnrepository.com/artifact/org.zaproxy/zap -->
-<dependency>
-    <groupId>org.zaproxy</groupId>
-    <artifactId>zap</artifactId>
-    <version>2.14.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.zaproxy/zap-clientapi -->
-<dependency>
-    <groupId>org.zaproxy</groupId>
-    <artifactId>zap-clientapi</artifactId>
-    <version>1.13.0</version>
-</dependency>
+    <!-- https://mvnrepository.com/artifact/org.zaproxy/zap -->
+    <dependency>
+        <groupId>org.zaproxy</groupId>
+        <artifactId>zap</artifactId>
+        <version>2.14.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.zaproxy/zap-clientapi -->
+    <dependency>
+        <groupId>org.zaproxy</groupId>
+        <artifactId>zap-clientapi</artifactId>
+        <version>1.13.0</version>
+    </dependency>
   </dependencies>
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.2.0</version>
+            <configuration>
+                <mainClass>VulnWeb</mainClass>
+            </configuration>
+        </plugin>
+    </plugins>
+  </build>
 </project>
